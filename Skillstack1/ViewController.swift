@@ -22,8 +22,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func buttonPress(_ sender: Any) {
-        print(textField1.text!)
-        print(textField2.text!)
+        appTitle.text = "\(Double(textField1.text!)! + Double(textField2.text!)!)"
     }
     
     
