@@ -9,10 +9,37 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+//Declarations
+    
+    
+    @IBOutlet weak var appTitle: UILabel!
+    var tapCount = 0
+    
+//UI element functions
+    
+    
+    @IBAction func buttonPress(_ sender: Any) {
+        tapCount = tapCount + 1
+        print("tapped this many times", tapCount)
+        
+        if tapCount >= 10 {
+            appTitle.text = "tapped 10 times"
+            print("tapped out")
+            tapCount = 0
+        } else {
+            appTitle.text = "Hello World"
+        }
+        
+    }
+    
+    
+    
+//Default functions
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+       
     }
 
     override func didReceiveMemoryWarning() {
