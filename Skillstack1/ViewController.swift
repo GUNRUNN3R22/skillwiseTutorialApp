@@ -13,23 +13,17 @@ class ViewController: UIViewController {
     
     
     @IBOutlet weak var appTitle: UILabel!
-    var tapCount = 0
+    
+    @IBOutlet weak var textField1: UITextField!
+    @IBOutlet weak var textField2: UITextField!
+    
     
 //UI element functions
     
     
     @IBAction func buttonPress(_ sender: Any) {
-        tapCount = tapCount + 1
-        print("tapped this many times", tapCount)
-        
-        if tapCount >= 20 {
-            appTitle.text = "tapped 20 times"
-            print("tapped out")
-            tapCount = 0
-        } else {
-            appTitle.text = "Hello World"
-        }
-        
+        print(textField1.text!)
+        print(textField2.text!)
     }
     
     
